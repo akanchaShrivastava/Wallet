@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println("Balance check1: "+myWallet.checkBalance());
 
-        myWallet.takeOutMoney(new Money(500));
+        myWallet.transactionMoneyTakenOut(new Money(500));
         myWallet.addMoney(new Money(100));
         System.out.println("Balance check2: "+myWallet.checkBalance());
 

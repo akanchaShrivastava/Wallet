@@ -13,7 +13,7 @@ public class Wallet {
 
     }
 
-    public boolean takeOutMoney(Money amount) {
+    public boolean transactionMoneyTakenOut(Money amount) {
 
         if(netBalance < amount.getValue())
             return false;
