@@ -1,5 +1,5 @@
 public interface InterfaceDiscount {
 
     public String getType();
-    public int getAmount();
+    public double getAmount(Money money ,String type);
 }

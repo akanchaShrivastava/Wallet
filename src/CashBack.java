@@ -1,7 +1,12 @@
 public class CashBack extends Wallet implements InterfaceDiscount {
-int CashBack;
-int balance;
-String type;
+double CashBack;
+double balance;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    String type;
 
     @Override
     public String getType() {
@@ -11,9 +16,24 @@ String type;
     }
 
     @Override
-    public int getAmount() {
+    public double getAmount(Money money, String type) {
+//balance=wallet.transactionMoneyTakenOut(Money amount);
+       balance=money.getValue();
+
+       if(type == "GooglePay"&& balance>500)
+       {
+           CashBack=balance*.02;
+           balance=balance+CashBack;
+           System.out.println(balance);
+       }else if (type=="Amazon"&& balance>1000){
+            CashBack=balance*.02;
+            balance=balance+CashBack;
+           System.out.println(balance);
+        }
 
 
-        return 0;
+
+        return balance;
+
     }
 }
